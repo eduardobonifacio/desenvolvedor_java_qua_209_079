@@ -11,7 +11,7 @@ public class App {
         System.out.println("Qual a sua idade? ");
         usuario.setIdade(ler.nextInt());
 
-        System.out.println("Nome é " + usuario.getnome());
+        System.out.println("Nome é " + usuario.getNome());
         System.out.println("Idade é " + usuario.getIdade());
 
         ler.close();
