@@ -36,21 +36,21 @@ public class App {
                 else if (opcao == "subtrair") {
                     JOptionPane.showMessageDialog(null,
                      "A subtração dos seus numeros é " + calculadora.subtrair(calculadora.getX(), calculadora.getY()),
-                      "soma",
+                      "subtração",
                       JOptionPane.INFORMATION_MESSAGE
                       );
                 }
                 else if (opcao == "multiplicar") {
                     JOptionPane.showMessageDialog(null,
                      "A multiplicação dos seus numeros é " + calculadora.multiplicar(calculadora.getX(), calculadora.getY()),
-                      "soma",
+                      "multiplicação",
                       JOptionPane.INFORMATION_MESSAGE
                       );
                 }
                 else if (opcao == "dividir") {
                     JOptionPane.showMessageDialog(null,
                      "A divisão dos seus numeros é " + calculadora.dividir(calculadora.getX(), calculadora.getY()),
-                      "soma",
+                      "divisão",
                       JOptionPane.INFORMATION_MESSAGE
                       );
                 }
