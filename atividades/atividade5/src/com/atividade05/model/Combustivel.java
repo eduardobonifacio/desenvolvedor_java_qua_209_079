@@ -27,7 +27,7 @@ public class Combustivel {
     }
 
     public String melhorCombustivel(double etanol, double gasolina) {
-        if (this.etanol < (this.gasolina * (70/100))) {
+        if (etanol <= (gasolina * 0.7)) {
             return "etanol";
         } else {return "gasolina";}
     }
