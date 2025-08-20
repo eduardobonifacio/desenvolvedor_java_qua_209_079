@@ -22,8 +22,8 @@ public class App {
             opcao = JOptionPane.showInputDialog(null, "Escolha a operação desejada", "Banco", JOptionPane.QUESTION_MESSAGE, null, opcoes, opcoes[0]);
             switch(opcao.toString()) {
                 case "Exibir dados" : JOptionPane.showMessageDialog(null, cc.exibirDados(), null, JOptionPane.INFORMATION_MESSAGE); break;
-                case "Fazer deposito" : cc.fazerDeposito(Double.parseDouble(JOptionPane.showInputDialog("Quanto você quer depositar em "))); break;
-                case "Fazer saque" : cc.fazerSaque(Double.parseDouble(JOptionPane.showInputDialog("Quanto você quer sacar em "))); break;
+                case "Fazer deposito" : cc.fazerDeposito(Double.parseDouble(JOptionPane.showInputDialog("Quanto você quer depositar "))); break;
+                case "Fazer saque" : cc.fazerSaque(Double.parseDouble(JOptionPane.showInputDialog("Quanto você quer sacar "))); break;
 
             }
         } while(opcao != "Sair");
