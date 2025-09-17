@@ -37,6 +37,10 @@
             <a class="nav-link active" href="/lista">Lista de usuarios</a>
           </li>
 
+          <li class="nav-item">
+            <a class="nav-link" href="/alterarUsuario">Alterar Usuario</a>
+          </li>
+
         </ul>
       </div>
 
@@ -66,8 +70,10 @@
                     <td> <span th:text="${usuario.email}"> </td>
                     <td> <span th:text="${usuario.cpf}"> </td>
                     <td>
-                        <button class="btn btn-amarelo me-2">Alterar</button>
-                        <button class="btn btn-vermelho">Excluir</button>
+                      <div>
+                        <a class="btn btn-amarelo me-2" role="button" th:href="@{'/alterarUsuario/' + ${usuario.idPessoa}}">Alterar</a>
+                        <a class="btn btn-vermelho">Excluir</a>
+                      </div>
                     </td>
                 </tr>
             </div>
@@ -89,3 +95,4 @@
 </body>
 
 </html>
+
