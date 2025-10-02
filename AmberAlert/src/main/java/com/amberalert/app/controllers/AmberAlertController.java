@@ -1,4 +1,7 @@
-package com.crud.app.controllers;
+package com.amberalert.app.controllers;
+
+import com.amberalert.app.models.Pessoa;
+import com.amberalert.app.repository.AppRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -10,66 +13,62 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.crud.app.repository.AppRepository;
-import com.crud.app.models.Pessoa;
-
 @Controller
-public class CrudController {
+public class AmberAlertController {
     @Autowired
     private AppRepository csr;
-
+    
     @RequestMapping("/")
     public String index() {
-
         return "index";
     }
 
-    @RequestMapping(value="/cadastrar", method=RequestMethod.GET)
-    public String cadastrar() {
-        return "cadastrarUser";
+    @RequestMapping(value="/CriarAlerta", method=RequestMethod.GET)
+    public String criarAlerta() {
+        return "CriarAlerta";
+    }
+    
+    @RequestMapping(value="/CriarAlerta", method=RequestMethod.POST)
+    public String criarAlerta(Pessoa usuario) {
+        csr.save(usuario);
+        return "redirect:/CriarAlerta";
     }
 
-    @RequestMapping(value="/cadastrar", method=RequestMethod.POST) 
-        public String cadastrar(Pessoa usuario) {
-            csr.save(usuario);
-            return "redirect:/cadastrar";
-        }
-
-    @RequestMapping(value="/lista", method=RequestMethod.GET)
-    public ModelAndView lista() {
-        ModelAndView mv = new ModelAndView("listarUsuario");
+    @RequestMapping(value="/Alertas", method=RequestMethod.GET)
+    public ModelAndView Alertas() {
+        ModelAndView mv = new ModelAndView("Alertas");
         Iterable<Pessoa> usuarios = csr.findAll();
         mv.addObject("usuarios", usuarios);
         return mv;
     }
-
-    @RequestMapping(value="/alterarUsuario/{idPessoa}", method=RequestMethod.GET)
-    public ModelAndView alterarUsuario(@PathVariable("idPessoa") long idPessoa) {
+    
+    @RequestMapping(value="/alterarAlerta/{idPessoa}", method=RequestMethod.GET)
+    public ModelAndView alterarAlerta(@PathVariable("idPessoa") long idPessoa) {
         Pessoa usuario = csr.findByIdPessoa(idPessoa);
-        ModelAndView mv = new ModelAndView("alterarUsuario");
+        ModelAndView mv = new ModelAndView("alterarAlerta");
         mv.addObject("usuario", usuario);
         return mv;
     }
 
-    @RequestMapping(value="/alterarUsuario/{idPessoa}", method=RequestMethod.POST)
-    public String alterarUsuario(@Validated Pessoa usuario, BindingResult result, RedirectAttributes attributes) {
+    @RequestMapping(value="/alterarAlerta/{idPessoa}", method=RequestMethod.POST)
+    public String alterarAlerta(@Validated Pessoa usuario, BindingResult result, RedirectAttributes attributes) {
         csr.save(usuario);
-        return "redirect:/lista";
+        return "redirect:/Alertas";
     }
 
     @RequestMapping("/confirmarExclusao/{idPessoa}") 
         public ModelAndView confirmarExclusao(@PathVariable("idPessoa") long idPessoa) {
             Pessoa usuario = csr.findByIdPessoa(idPessoa);
-            ModelAndView mv = new ModelAndView("excluirUsuario");
+            ModelAndView mv = new ModelAndView("excluirAlerta");
             mv.addObject("usuario", usuario);
             return mv;
     }
 
 
-    @RequestMapping("/excluirUsuario")
-    public String excluirUsuario(long idPessoa) {
+    @RequestMapping("/excluirAlerta")
+    public String excluirAlerta(long idPessoa) {
         Pessoa usuario = csr.findByIdPessoa(idPessoa);
         csr.delete(usuario);
-        return "redirect:/lista";
+        return "redirect:/Alertas";
     }
 }

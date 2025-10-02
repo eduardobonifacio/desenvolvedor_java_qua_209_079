@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Amber Alert</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/estilo.css">
+  </head>
+
+  <body style="background-color: rgb(255, 255, 255);">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg" style="background-color: rgb(255, 72, 0);" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">
+        <img src="/img/topaz_3521718.png" alt="Logo" width="40" height="40">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Inicio</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/Alertas">Alertas</a>
+          </li>
+
+           <li class="nav-item">
+            <a class="nav-link" href="/CriarAlerta">Criar Alerta</a>
+          </li>
+          
+
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+<!-- Textil-->
+<section class="page-section" id="services">
+    <div class="container">
+        <div class="text-center" style="padding: 150px;">
+            <h2 class="section-heading text-uppercase">Bem vindo ao Amber Alert</h2>
+            <h3 class="section-subheading text-muted">O seu sistema de alerta de desaparecimento.</h3>
+        </div>
+        <div class="row text-center">
+            <div class="col-md-4">
+                <span class="fa-stack fa-4x">
+                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                    <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                </span>
+                <h4 class="my-3">Sem Cadastro</h4>
+                <p class="text-muted">Nosso sistema permite o uso sem a necessidade de um login, agilizando seu alerta e facilitando o uso.</p>
+            </div>
+            <div class="col-md-4">
+                <span class="fa-stack fa-4x">
+                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                    <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
+                </span>
+                <h4 class="my-3"> Sistema de pesquisa</h4>
+                <p class="text-muted">Com o sistema, você pode buscar na barra de pesquisa o desaparecido.</p>
+            </div>
+            <div class="col-md-4">
+                <span class="fa-stack fa-4x">
+                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                    <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
+                </span>
+                <h4 class="my-3">Facilidade</h4>
+                <p class="text-muted">Apenas acesse a aba de criação de alerta, cadatre e já sera cadastrado no sistema para todos.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container" th:fragment="footer">
+  <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+      <div class="col mb-3"> <a href="/"
+              class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none" aria-label="Bootstrap">
+              <svg class="bi me-2" width="40" height="32" aria-hidden="true">
+                  <use xlink:href="#bootstrap"></use>
+              </svg> </a>
+              <a>
+                <img src="/img/topaz_3521718.png" style="width: 15%;">Amber © 2025
+              </a>
+      </div>
+    
+      <div class="col mb-3 text-end">
+          <h5>Seções</h5>
+          <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="/" class="nav-link p-0 text-body-secondary">Pagina inicial</a></li>
+              <li class="nav-item mb-2"><a href="/CriarAlerta" class="nav-link p-0 text-body-secondary">Criar Alerta</a></li>
+              <li class="nav-item mb-2"><a href="/Alertas" class="nav-link p-0 text-body-secondary">Alertas</a></li>
+          </ul>
+      </div>
+  </footer>
+ </div>
+            
+  </body>
+</html>
