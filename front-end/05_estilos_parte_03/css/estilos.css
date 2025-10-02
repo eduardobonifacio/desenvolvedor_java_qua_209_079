@@ -1,0 +1,83 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 50px;
+    margin: 20px ;
+}
+
+h1 {
+    text-align: center;
+}
+
+hr {
+    margin: 16px;
+}
+
+form {
+    padding: 15px;
+}
+
+input, select {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    padding: 5px 15px;
+    margin: 30px 15px;
+
+}
+
+select {
+    background-color: white;
+}
+
+.nome {
+    width: 30%;
+}
+
+.sobrenome {
+    width: 40%;
+}
+
+.telefone{
+    width: 15%;
+}
+
+.email{
+    width: 15%;
+}
+
+.genero{
+    width: 15%;
+}
+
+.cep{
+    width: 15%;
+}
+.cidade{
+    width: 15%;
+}
+.endereço{
+    width: 15%;
+}
+
+button {
+    width: 300px;
+    height: 60px;
+    align-items: center;
+    position: center;
+    border-radius: 30px;
+    font-size: large;
+    border-width: 5px;
+    border-color: rgb(255, 0, 242);
+    color: rgb(144, 0, 255);
+    background-color: black;
+}
+
+button:hover {
+    color: black;
+    background-color: rgb(144, 0, 255);
+    transition: 300ms ease;
+}
+
+.label {
+    font-size: 50px;
+}

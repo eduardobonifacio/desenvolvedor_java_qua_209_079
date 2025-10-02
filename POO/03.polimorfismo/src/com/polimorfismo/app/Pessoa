@@ -1,0 +1,19 @@
+package com.polimorfismo.app;
+
+abstract public class Pessoa {
+
+    public String email;
+    public String telefone;
+    public String endereco;
+
+    
+
+    public Pessoa(String endereco) {
+        this.endereco = email;
+        this.endereco = telefone;
+        this.endereco = endereco;        
+    }
+
+
+
+}
